@@ -1,9 +1,9 @@
-node_modules
+#node_modules
 
 zzz.js
 final-join.js
 
-src/models/FinalJoin.js
+models/FinalJoin.js
 
 joined.json
 MOCK-DATA-1 (1).json
