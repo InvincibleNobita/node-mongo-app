@@ -14,8 +14,7 @@ app.use(express.static(__dirname + '/views'));
 app.set('view engine', 'ejs');
 
 const connect = mongoose.connect(
-    // String(process.env.MONGO_URI),
-    'mongodb+srv://HackSkill:Wpwd3NEkSEv03PAY@cluster0.adinr.mongodb.net/test',
+    process.env.MONGO_URI,
     {},
     (err) => {
         if (err) console.log(err);
