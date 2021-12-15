@@ -10,12 +10,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static(__dirname + '/views'));
-app.set('view engine', 'ejs');
+// app.use(express.static(__dirname + '/views'));
+// app.set('view engine', 'ejs');
 
 const connect = mongoose.connect(
-    // String(process.env.MONGO_URI),
-    'mongodb://localhost:27017',
+    process.env.MONGO_URI,
     {},
     (err) => {
         if (err) console.log(err);
