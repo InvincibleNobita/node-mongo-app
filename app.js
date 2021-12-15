@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 const connect = mongoose.connect(
     // String(process.env.MONGO_URI),
-    'mongodb+srv://HackSkill:Wpwd3NEkSEv03PAY@cluster0.adinr.mongodb.net/test',
+    'mongodb://localhost:27017',
     {},
     (err) => {
         if (err) console.log(err);
