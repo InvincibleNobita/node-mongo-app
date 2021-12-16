@@ -10,9 +10,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.use(express.static(__dirname + '/views'));
-// app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/pubic'));
+app.set('view engine', 'ejs');
 
+// connecting to mongo atlas
 const connect = mongoose.connect(
     process.env.MONGO_URI,
     {},
